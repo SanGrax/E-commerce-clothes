@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#catalog {
+    padding: 2rem;
+    text-align: center;
+}
+
+#search-input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 600px;
+    font-size: 1rem;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.product-card span {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.product-card button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-card button:hover {
+    background-color: #218838;
+}
+
+#cart {
+    padding: 2rem;
+    text-align: center;
+}
+
+.cart-container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cart-table th, #cart-table td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.cart-total {
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+#checkout-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+#checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
