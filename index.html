@@ -30,22 +30,22 @@
     <section id="catalog">
         <h2>Catálogo de Productos</h2>
         <input type="text" id="search-input" placeholder="Buscar productos..." onkeyup="filterProducts()">
-        <div class="product-container">
-            <div class="product-card">
+        <div class="product-container" id="product-container">
+            <div class="product-card" data-name="Producto 1">
                 <img src="css/img/producto1.jpg" alt="Producto 1">
                 <h3>Producto 1</h3>
                 <p>Descripción del producto 1</p>
                 <span>$20.00</span>
                 <button class="add-to-cart" data-name="Producto 1" data-price="20.00">Agregar al Carrito</button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-name="Producto 2">
                 <img src="css/img/producto2.jpg" alt="Producto 2">
                 <h3>Producto 2</h3>
                 <p>Descripción del producto 2</p>
                 <span>$25.00</span>
                 <button class="add-to-cart" data-name="Producto 2" data-price="25.00">Agregar al Carrito</button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-name="Producto 3">
                 <img src="css/img/producto3.jpg" alt="Producto 3">
                 <h3>Producto 3</h3>
                 <p>Descripción del producto 3</p>
@@ -83,6 +83,11 @@
     <footer>
         <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5493516748115" target="_blank" class="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
 
     <script src="scripts.js"></script>
 </body>

@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
     const productContainer = document.getElementById('product-container');
     const productCards = document.querySelectorAll('.product-card');
-    
+    const checkoutButton = document.getElementById('checkout-btn');
+
     function updateCart() {
         cartTableBody.innerHTML = '';
         let total = 0;
@@ -67,11 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCart();
         }
     });
-    
-    document.getElementById('checkout-btn').addEventListener('click', () => {
-        alert('Gracias por su compra!');
-        cart.length = 0;
-        updateCart();
+
+    function generateWhatsAppMessage() {
+        const productNames = cart.map(item => `${item.quantity} x ${item.name}`).join(', ');
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
+        return `Hola, estas por comprar: ${productNames}. Con un total de: $${total}. Para continuar, realiza una transferencia.`;
+    }
+
+    checkoutButton.addEventListener('click', () => {
+        const message = generateWhatsAppMessage();
+        const phoneNumber = "5493516748115";
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
     });
 
     function filterProducts() {
